@@ -1,33 +1,21 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="static/css/styles.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
     <title>Home</title>
 </head>
-
 <body>
-
     <div class="container">
-        <div class="row header">
-            <div class="col-md-12">
-                <a href="index.html"><button class="btn btn-primary">Home</button></a>
-                <a href="/area_breakdown">Area Breakdown</a>
-                <a href="customer_search.html"><button class="btn btn-primary">Customer Search</button></a>
-                <a href="statistics.html"><button class="btn btn-primary">Statistics</button></a>
-            </div>
-            
-        </div>
-        <div class="row">
-            <div class="col-md-12">
-                <h1>Welcome to the Home Page</h1>
-                <p>This is the home page of your database project. You can navigate to different sections using the buttons in the header.</p>
-            </div>
+        <div class="header">
+            <button class="btn btn-primary">Home</button>
+            <a href="/area_breakdown" class="btn btn-primary">Area Breakdown</a>
+            <button class="btn btn-primary">Customer Search</button>
+            <button class="btn btn-primary">Statistics</button>
         </div>
     </div>
-
 </body>
-
 </html>

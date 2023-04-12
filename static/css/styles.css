@@ -39,3 +39,9 @@
 body {
   padding-top: 70px;
 }
+
+.btn {
+  font-size: 1.2em;
+  padding: 10px 20px;
+}
+

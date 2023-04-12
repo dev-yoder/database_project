@@ -45,3 +45,26 @@ body {
   padding: 10px 20px;
 }
 
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  margin-top: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.header .btn {
+  flex-grow: 1;
+  font-size: 1.25rem; /* Increase the font size */
+  padding: 10px 20px; /* Add more padding to the buttons */
+}
+

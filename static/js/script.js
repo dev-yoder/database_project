@@ -1,71 +1,25 @@
-document.addEventListener("DOMContentLoaded", async () => {
-  const data = await fetch("/sample_data.json").then((res) => res.json());
-  console.log("Fetched data:", data); // Add this line to log the fetched data
-
-  if (document.getElementById("customer-table")) {
-    populateCustomerTable(data);
-  }
-
-  if (document.getElementById("area-container")) {
-    populateAreaBreakdown(data);
-  }
+document.addEventListener('DOMContentLoaded', function() {
+  fetchData();
 });
 
+async function fetchData() {
+  const response = await fetch('/area_data');
+  const data = await response.json();
+  console.log(data);
 
-  
-  function populateCustomerTable(data) {
-    const customerTable = document.getElementById("customer-table");
-  
-    data.areas.forEach((area) => {
-      area.customers.forEach((customer) => {
-        const row = document.createElement("tr");
-  
-        const idCell = document.createElement("td");
-        idCell.textContent = customer.id;
-        row.appendChild(idCell);
-  
-        const nameCell = document.createElement("td");
-        nameCell.textContent = customer.name;
-        nameCell.addEventListener("dblclick", () => showCustomerDetails(customer));
-        row.appendChild(nameCell);
-  
-        const areaCell = document.createElement("td");
-        areaCell.textContent = area.name;
-        row.appendChild(areaCell);
-  
-        customerTable.appendChild(row);
-      });
-    });
+  const area_breakdown = document.getElementById('area_breakdown');
+  area_breakdown.innerHTML = '';
+
+  for (const area of data) {
+    const option = document.createElement('option');
+    option.value = area.id;
+    option.textContent = area.name;
+    area_breakdown.appendChild(option);
   }
-  
-  function populateAreaBreakdown(data) {
-    const areaContainer = document.getElementById("area-container");
-  
-    data.areas.forEach((area) => {
-      const areaColumn = document.createElement("div");
-      areaColumn.className = "col";
-  
-      const areaTitle = document.createElement("h4");
-      areaTitle.textContent = area.name;
-      areaColumn.appendChild(areaTitle);
-  
-      populateCustomerNames(areaColumn, area.customers);
-      areaContainer.appendChild(areaColumn);
-    });
-  }
-  
-  function populateCustomerNames(areaColumn, customers) {
-    for (const customer of customers) {
-      const customerName = document.createElement("div");
-      customerName.className = "customer-name";
-      customerName.textContent = customer.name;
-      customerName.addEventListener("dblclick", () => showCustomerDetails(customer));
-      areaColumn.appendChild(customerName);
-    }
-  }
-  
-  function showCustomerDetails(customer) {
-    const customerDetails = `Name: ${customer.name}\nAddress: ${customer.address}\nInstallation Status: ${customer.installation_status}`;
-    window.open().document.write(`<pre>${customerDetails}</pre>`);
-  }
-  
+}
+
+function changeArea() {
+  const area_breakdown = document.getElementById('area_breakdown');
+  const selectedAreaId = area_breakdown.value;
+  console.log(`Selected Area ID: ${selectedAreaId}`);
+}

@@ -11,22 +11,35 @@
 <body>
     <div class="container">
         <div class="header">
-            <a href="/" class="btn btn-primary">Home</a> <!-- Change this line -->
+            <a href="/" class="btn btn-primary">Home</a>
             <button class="btn btn-primary">Area Breakdown</button>
             <button class="btn btn-primary">Customer Search</button>
             <button class="btn btn-primary">Statistics</button>
         </div>
-        <div class="areas">
-            <div class="area">
-                <h2>Misc.</h2>
-                <button class="btn btn-secondary">Jane Smith</button>
-                <button class="btn btn-secondary">John Doe</button>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header">Misc.</div>
+                    <div class="card-body">
+                        <button class="btn btn-primary">Jane Smith</button>
+                    </div>
+                </div>
             </div>
-            <div class="area">
-                <h2>Progreso</h2>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header">Progreso</div>
+                    <div class="card-body">
+                        <button class="btn btn-primary">John Doe</button>
+                    </div>
+                </div>
             </div>
-            <div class="area">
-                <h2>Los Venados</h2>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header">Los Venados</div>
+                    <div class="card-body">
+                        <button class="btn btn-primary">...</button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

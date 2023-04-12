@@ -57,14 +57,12 @@ body {
 
 .header {
   display: flex;
-  justify-content: center;
+  justify-content: space-around; /* Change from 'center' to 'space-around' */
   align-items: center;
   margin-bottom: 20px;
 }
 
 .header .btn {
-  flex-grow: 1;
-  font-size: 1.25rem; /* Increase the font size */
-  padding: 10px 20px; /* Add more padding to the buttons */
+  font-size: 1.5rem; /* Increase the font size further */
+  padding: 15px 30px; /* Add more padding to the buttons */
 }
-

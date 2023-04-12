@@ -7,6 +7,16 @@
   align-items: center;
 }
 
+.header {
+  background-color: #f1f1f1;
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
 .customer-name {
   cursor: pointer;
   margin-bottom: 5px;
@@ -26,6 +36,9 @@
   z-index: 1030; /* Increase z-index to avoid the header shuffling issue */
 }
 
+body {
+  padding-top: 70px;
+}
 
 
 git remote add origin https://github.com/dev_yoder/database_project.git

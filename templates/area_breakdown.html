@@ -1,43 +1,34 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="static/css/styles.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
     <title>Area Breakdown</title>
 </head>
-
 <body>
-    <a href="/">Home</a>
     <div class="container">
-        <div class="row header">
-            <div class="col-md-12">
-                <button class="btn btn-primary">Home</button>
-                <button class="btn btn-primary">Area Breakdown</button>
-                <button class="btn btn-primary">Customer Search</button>
-                <button class="btn btn-primary">Statistics</button>
-            </div>
+        <div class="header">
+            <a href="/" class="btn btn-primary">Home</a> <!-- Change this line -->
+            <button class="btn btn-primary">Area Breakdown</button>
+            <button class="btn btn-primary">Customer Search</button>
+            <button class="btn btn-primary">Statistics</button>
         </div>
-        <div class="row">
-            <div class="col-md-4">
+        <div class="areas">
+            <div class="area">
                 <h2>Misc.</h2>
-                <button class="btn btn-primary">Jane Smith</button>
-                <!-- Add more buttons as needed -->
+                <button class="btn btn-secondary">Jane Smith</button>
+                <button class="btn btn-secondary">John Doe</button>
             </div>
-            <div class="col-md-4">
+            <div class="area">
                 <h2>Progreso</h2>
-                <button class="btn btn-primary">John Doe</button>
-                <!-- Add more buttons as needed -->
             </div>
-            <div class="col-md-4">
+            <div class="area">
                 <h2>Los Venados</h2>
-                <button class="btn btn-primary">...</button>
-                <!-- Add more buttons as needed -->
             </div>
         </div>
     </div>
-
 </body>
-
 </html>

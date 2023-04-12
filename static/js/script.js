@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", async () => {
   const data = await fetch("/sample_data.json").then((res) => res.json());
+  console.log("Fetched data:", data); // Add this line to log the fetched data
 
   if (document.getElementById("customer-table")) {
     populateCustomerTable(data);
@@ -9,6 +10,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     populateAreaBreakdown(data);
   }
 });
+
 
   
   function populateCustomerTable(data) {

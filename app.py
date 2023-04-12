@@ -1,3 +1,6 @@
+import json
+from flask import Flask, render_template, jsonify
+
 from flask import Flask, render_template
 
 app = Flask(__name__)
@@ -12,3 +15,10 @@ def area_breakdown():
 
 if __name__ == '__main__':
     app.run(debug=True)
+
+    @app.route("/area-data")
+def area_data():
+    with open("sample_data.json", "r") as f:
+        data = json.load(f)
+    return jsonify(data)
+

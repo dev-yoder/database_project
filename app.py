@@ -17,5 +17,10 @@ def area_data():
         data = json.load(file)
     return jsonify(data)
 
+@app.route('/area_breakdown')
+def area_breakdown():
+    return render_template('area_breakdown.html')
+
+
 if __name__ == '__main__':
     app.run(debug=True)

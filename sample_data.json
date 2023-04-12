@@ -1,0 +1,17 @@
+[
+  {
+    "name": "Hebbronville",
+    "color": "#FF0000",
+    "customers": [
+      {"name": "John Doe", "address": "123 Main St", "installation_status": "installed"},
+      {"name": "Jane Smith", "address": "234 Elm St", "installation_status": "pending"}
+    ]
+  },
+  {
+    "name": "Linn San Manuel",
+    "color": "#FFAA00",
+    "customers": [
+      {"name": "Alice Johnson", "address": "345 Oak St", "installation_status": "installed"}
+    ]
+  }
+]

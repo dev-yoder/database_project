@@ -21,9 +21,9 @@
 }
 
 .navbar-fixed {
-  position: sticky !important;
-  top: 0 !important;
-  z-index: 1000 !important;
+  position: sticky;
+  top: 0;
+  z-index: 1030; /* Increase z-index to avoid the header shuffling issue */
 }
 
 

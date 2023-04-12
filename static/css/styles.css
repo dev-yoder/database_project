@@ -57,12 +57,18 @@ body {
 
 .header {
   display: flex;
-  justify-content: space-around; /* Change from 'center' to 'space-around' */
+  justify-content: space-around;
   align-items: center;
   margin-bottom: 20px;
+  width: 100%; /* Add 100% width */
 }
 
 .header .btn {
-  font-size: 1.5rem; /* Increase the font size further */
-  padding: 15px 30px; /* Add more padding to the buttons */
+  font-size: 2.5rem; /* Increase the font size even further */
+  padding: 20px 40px; /* Add more padding to the buttons */
+}
+
+/* Add the following CSS rule to style the borders of the bootstrap columns */
+.col {
+  border: 2px solid blue;
 }

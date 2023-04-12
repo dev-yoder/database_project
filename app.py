@@ -1,7 +1,5 @@
+from flask import Flask, render_template, request, jsonify
 import json
-from flask import Flask, render_template, jsonify
-
-from flask import Flask, render_template
 
 app = Flask(__name__)
 
@@ -13,12 +11,11 @@ def index():
 def area_breakdown():
     return render_template('area_breakdown.html')
 
-if __name__ == '__main__':
-    app.run(debug=True)
-
-    @app.route("/area-data")
+@app.route('/area_data', methods=['GET'])
 def area_data():
-    with open("sample_data.json", "r") as f:
-        data = json.load(f)
+    with open('sample_data.json', 'r') as file:
+        data = json.load(file)
     return jsonify(data)
 
+if __name__ == '__main__':
+    app.run(debug=True)

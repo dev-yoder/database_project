@@ -59,11 +59,11 @@ a:hover {
   align-items: center;
 }
 
-
 .column-title {
   text-align: center;
-  margin-top: 10px;
+  width: 100%;
 }
+
 
 .column-border {
   border: 1px solid #007bff;

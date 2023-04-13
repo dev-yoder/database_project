@@ -49,6 +49,10 @@ a:hover {
   margin: 1rem -15px;
 }
 
+.center-text {
+  text-align: center;
+}
+
 .column {
   flex: 1;
   padding: 1rem 15px;

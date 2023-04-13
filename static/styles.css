@@ -10,14 +10,16 @@ body {
   padding: 1rem;
 }
 
-.header a {
-  font-size: 14px; /* 70% of the original 18px */
-  padding: 7px 14px; /* 70% of the original 10px 20px */
-  text-decoration: none;
+.header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  font-size: 1.5rem;
+  padding: 1rem 0;
+  background-color: #007bff;
   color: white;
-  display: inline-block;
 }
-
 
 a {
   color: white;

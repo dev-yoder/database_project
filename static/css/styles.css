@@ -70,3 +70,8 @@ a:hover {
   border-radius: 5px;
   padding: 1rem;
 }
+
+.center-text {
+  text-align: center;
+}
+
